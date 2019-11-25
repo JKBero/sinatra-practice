@@ -17,10 +17,17 @@ get '/tulip' do
   "You're finally working!"
 end
 
-get '/cat' do
+get '/random-cat' do
+  @name = ["Lassy", "Fido", "Beethoven"].sample
+  erb(:cat)
+end
+
+get '/named-cat' do
+  @name = params[:name]
   erb(:cat)
 end
 
 get '/dog' do
+  @dog_name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
 end
