@@ -19,12 +19,12 @@ end
 
 get '/random-cat' do
   @name = ["Lassy", "Fido", "Beethoven"].sample
-  erb(:cat)
+  erb(:random_cat)
 end
 
 get '/named-cat' do
   @name = params[:name]
-  erb(:cat)
+  erb(:named_cat)
 end
 
 get '/dog' do
