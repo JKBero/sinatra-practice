@@ -22,7 +22,7 @@ get '/random-cat' do
   erb(:random_cat)
 end
 
-get '/named-cat' do
+post '/named-cat' do
   @name = params[:name]
   erb(:named_cat)
 end
@@ -30,4 +30,8 @@ end
 get '/dog' do
   @dog_name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
+end
+
+get '/form' do
+  erb(:form)
 end
